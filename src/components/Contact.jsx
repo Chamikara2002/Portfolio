@@ -68,17 +68,17 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-24 relative z-10">
+    <section id="contact" className="py-10 sm:py-14 lg:py-16 scroll-mt-20 lg:scroll-mt-24 relative z-10 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Heading with ScrollReveal */}
         <ScrollReveal direction="up" duration={700}>
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <div className="text-center max-w-3xl mx-auto mb-8 lg:mb-10 space-y-3">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#64FFDA]/10 border border-[#64FFDA]/30 rounded-full text-[#64FFDA] text-xs font-mono shadow-neon-teal animate-pulse-glow">
               <MessageSquare className="w-4 h-4 text-[#64FFDA] animate-bounce" />
               <span className="uppercase tracking-widest font-bold">GET IN TOUCH</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-headline font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-headline font-extrabold text-white tracking-tight">
               Contact <span className="text-gradient-teal">Me</span>
             </h2>
             <div className="h-1.5 w-32 bg-gradient-architectural mx-auto rounded-full shadow-neon-teal" />
@@ -86,18 +86,18 @@ export default function Contact() {
         </ScrollReveal>
 
         {/* Dedicated 3D WhatsApp Featured Banner Card */}
-        <ScrollReveal direction="up" delay={150}>
-          <div className="mb-12">
-            <TiltCard maxTilt={8} glowColor="rgba(37, 211, 102, 0.25)" className="p-6 sm:p-8 bg-[#112240] border-emerald-500/40">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <ScrollReveal direction="up" delay={100}>
+          <div className="mb-6 lg:mb-8">
+            <TiltCard maxTilt={8} glowColor="rgba(37, 211, 102, 0.25)" className="p-5 sm:p-6 lg:p-7 bg-[#112240] border-emerald-500/40">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
 
                 <div className="flex items-center gap-4">
-                  <div className="p-4 bg-emerald-500/15 border border-emerald-500/40 rounded-2xl text-emerald-400 shadow-[0_0_20px_rgba(37,211,102,0.3)] animate-pulse">
-                    <MessageCircle className="w-8 h-8 sm:w-10 sm:h-10" />
+                  <div className="p-3.5 bg-emerald-500/15 border border-emerald-500/40 rounded-2xl text-emerald-400 shadow-[0_0_20px_rgba(37,211,102,0.3)] animate-pulse">
+                    <MessageCircle className="w-7 h-7 sm:w-9 sm:h-9" />
                   </div>
                   <div>
                     <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest font-bold block">INSTANT MESSAGING</span>
-                    <h3 className="text-xl sm:text-2xl font-headline font-extrabold text-white">Chat Directly on WhatsApp</h3>
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-headline font-extrabold text-white">Chat Directly on WhatsApp</h3>
                     <p className="text-xs sm:text-sm text-slate-300 font-mono mt-0.5">+94 76 199 1008 • Fast response within minutes</p>
                   </div>
                 </div>
@@ -106,9 +106,9 @@ export default function Contact() {
                   href="https://wa.me/94761991008"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-extrabold text-sm rounded-2xl shadow-[0_0_25px_rgba(37,211,102,0.4)] transition-all transform hover:scale-105 active:scale-95 shrink-0"
+                  className="w-full md:w-auto flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-extrabold text-sm rounded-xl shadow-[0_0_25px_rgba(37,211,102,0.4)] transition-all transform hover:scale-105 active:scale-95 shrink-0"
                 >
-                  <MessageCircle className="w-5 h-5 fill-current" />
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
                   <span>Start WhatsApp Chat</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
@@ -118,55 +118,55 @@ export default function Contact() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
 
           {/* Contact Details Column */}
-          <div className="lg:col-span-5 space-y-6">
-            <ScrollReveal direction="right" delay={200}>
-              <TiltCard maxTilt={10} className="p-8 space-y-6 bg-[#112240] border-[#64FFDA]/30">
-                <h3 className="text-2xl font-headline font-extrabold text-white tracking-tight">
+          <div className="lg:col-span-5 space-y-5">
+            <ScrollReveal direction="right" delay={150}>
+              <TiltCard maxTilt={10} className="p-6 lg:p-6 xl:p-8 space-y-5 bg-[#112240] border-[#64FFDA]/30">
+                <h3 className="text-xl sm:text-2xl font-headline font-extrabold text-white tracking-tight">
                   Let's discuss your next project!
                 </h3>
-                <p className="text-sm text-slate-300 leading-relaxed font-light">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
                   Have a software project, UI/UX design requirement, or agency collaboration in mind? Reach out via WhatsApp, email, or social channels.
                 </p>
 
-                <div className="space-y-4 pt-2">
+                <div className="space-y-3 pt-1">
 
                   {/* Direct Email */}
-                  <div className="flex items-center gap-4 p-3.5 bg-[#0A192F]/80 rounded-xl border border-[#233554]">
-                    <div className="p-2.5 bg-[#64FFDA]/10 text-[#64FFDA] rounded-lg">
-                      <Mail className="w-5 h-5" />
+                  <div className="flex items-center gap-3.5 p-3 bg-[#0A192F]/80 rounded-xl border border-[#233554]">
+                    <div className="p-2 bg-[#64FFDA]/10 text-[#64FFDA] rounded-lg">
+                      <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <div>
-                      <span className="text-[11px] text-slate-400 font-mono block">Direct Email</span>
-                      <a href="mailto:vilochanabandara25@gmail.com" className="text-sm font-bold text-white hover:text-[#64FFDA] transition-colors">
+                      <span className="text-[10px] text-slate-400 font-mono block">Direct Email</span>
+                      <a href="mailto:vilochanabandara25@gmail.com" className="text-xs sm:text-sm font-bold text-white hover:text-[#64FFDA] transition-colors">
                         vilochanabandara25@gmail.com
                       </a>
                     </div>
                   </div>
 
                   {/* Phone */}
-                  <div className="flex items-center gap-4 p-3.5 bg-[#0A192F]/80 rounded-xl border border-[#233554]">
-                    <div className="p-2.5 bg-[#FFD700]/10 text-[#FFD700] rounded-lg">
-                      <Phone className="w-5 h-5" />
+                  <div className="flex items-center gap-3.5 p-3 bg-[#0A192F]/80 rounded-xl border border-[#233554]">
+                    <div className="p-2 bg-[#FFD700]/10 text-[#FFD700] rounded-lg">
+                      <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <div>
-                      <span className="text-[11px] text-slate-400 font-mono block">Phone & Whatsapp</span>
-                      <a href="tel:+94704086226" className="text-sm font-bold text-white hover:text-[#64FFDA] transition-colors">
+                      <span className="text-[10px] text-slate-400 font-mono block">Phone & Whatsapp</span>
+                      <a href="tel:+94704086226" className="text-xs sm:text-sm font-bold text-white hover:text-[#64FFDA] transition-colors">
                         +94 70 408 6226
                       </a>
                     </div>
                   </div>
 
                   {/* Location */}
-                  <div className="flex items-center gap-4 p-3.5 bg-[#0A192F]/80 rounded-xl border border-[#233554]">
-                    <div className="p-2.5 bg-[#38BDF8]/10 text-[#38BDF8] rounded-lg">
-                      <MapPin className="w-5 h-5" />
+                  <div className="flex items-center gap-3.5 p-3 bg-[#0A192F]/80 rounded-xl border border-[#233554]">
+                    <div className="p-2 bg-[#38BDF8]/10 text-[#38BDF8] rounded-lg">
+                      <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <div>
-                      <span className="text-[11px] text-slate-400 font-mono block">Location</span>
-                      <span className="text-sm font-bold text-white">
+                      <span className="text-[10px] text-slate-400 font-mono block">Location</span>
+                      <span className="text-xs sm:text-sm font-bold text-white">
                         Galigamuwa Town, Kegalle District, Sri Lanka
                       </span>
                     </div>
@@ -175,8 +175,8 @@ export default function Contact() {
                 </div>
 
                 {/* Social Channels */}
-                <div className="pt-4 border-t border-[#233554]">
-                  <span className="text-xs font-mono text-slate-400 block mb-3">CONNECT ACROSS PLATFORMS:</span>
+                <div className="pt-3 border-t border-[#233554]">
+                  <span className="text-xs font-mono text-slate-400 block mb-2.5">CONNECT ACROSS PLATFORMS:</span>
                   <div className="flex items-center gap-2 flex-wrap">
                     {socialLinks.map((s) => {
                       const IconComp = s.icon;
@@ -186,7 +186,7 @@ export default function Contact() {
                           href={s.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2.5 bg-[#0A192F] hover:bg-[#64FFDA]/20 border border-[#233554] hover:border-[#64FFDA]/40 rounded-xl text-slate-300 hover:text-[#64FFDA] transition-all"
+                          className="p-2 bg-[#0A192F] hover:bg-[#64FFDA]/20 border border-[#233554] hover:border-[#64FFDA]/40 rounded-xl text-slate-300 hover:text-[#64FFDA] transition-all"
                           title={s.name}
                         >
                           <IconComp className="w-4 h-4" />
@@ -201,11 +201,11 @@ export default function Contact() {
 
           {/* Contact Form Column */}
           <div className="lg:col-span-7">
-            <ScrollReveal direction="left" delay={250}>
-              <TiltCard maxTilt={8} className="p-8 bg-[#112240] border-[#64FFDA]/30">
+            <ScrollReveal direction="left" delay={200}>
+              <TiltCard maxTilt={8} className="p-6 lg:p-6 xl:p-8 bg-[#112240] border-[#64FFDA]/30">
 
                 {submitted ? (
-                  <div className="py-12 text-center space-y-4 animate-fadeIn">
+                  <div className="py-10 text-center space-y-4 animate-fadeIn">
                     <div className="p-4 bg-[#64FFDA]/10 text-[#64FFDA] border border-[#64FFDA]/30 rounded-2xl w-fit mx-auto animate-bounce">
                       <CheckCircle className="w-10 h-10" />
                     </div>
@@ -215,63 +215,63 @@ export default function Contact() {
                     </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <h3 className="text-xl font-headline font-bold text-white mb-4">Send a Direct Message</h3>
+                  <form onSubmit={handleSubmit} className="space-y-3.5">
+                    <h3 className="text-lg sm:text-xl font-headline font-bold text-white mb-2">Send a Direct Message</h3>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div className="space-y-1.5">
-                        <label className="text-xs font-mono text-slate-400">Your Name *</label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                      <div className="space-y-1">
+                        <label className="text-[11px] font-mono text-slate-400">Your Name *</label>
                         <input
                           type="text"
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="John Doe"
-                          className="w-full bg-[#0A192F] border border-[#233554] focus:border-[#64FFDA] rounded-xl p-3 text-sm text-white placeholder-slate-600 focus:outline-none transition-colors"
+                          className="w-full bg-[#0A192F] border border-[#233554] focus:border-[#64FFDA] rounded-xl p-2.5 sm:p-3 text-xs sm:text-sm text-white placeholder-slate-600 focus:outline-none transition-colors"
                         />
                       </div>
 
-                      <div className="space-y-1.5">
-                        <label className="text-xs font-mono text-slate-400">Email Address *</label>
+                      <div className="space-y-1">
+                        <label className="text-[11px] font-mono text-slate-400">Email Address *</label>
                         <input
                           type="email"
                           required
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="john@example.com"
-                          className="w-full bg-[#0A192F] border border-[#233554] focus:border-[#64FFDA] rounded-xl p-3 text-sm text-white placeholder-slate-600 focus:outline-none transition-colors"
+                          className="w-full bg-[#0A192F] border border-[#233554] focus:border-[#64FFDA] rounded-xl p-2.5 sm:p-3 text-xs sm:text-sm text-white placeholder-slate-600 focus:outline-none transition-colors"
                         />
                       </div>
                     </div>
 
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-mono text-slate-400">Subject *</label>
+                    <div className="space-y-1">
+                      <label className="text-[11px] font-mono text-slate-400">Subject *</label>
                       <input
                         type="text"
                         required
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         placeholder="Project Inquiry / UI/UX Design"
-                        className="w-full bg-[#0A192F] border border-[#233554] focus:border-[#64FFDA] rounded-xl p-3 text-sm text-white placeholder-slate-600 focus:outline-none transition-colors"
+                        className="w-full bg-[#0A192F] border border-[#233554] focus:border-[#64FFDA] rounded-xl p-2.5 sm:p-3 text-xs sm:text-sm text-white placeholder-slate-600 focus:outline-none transition-colors"
                       />
                     </div>
 
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-mono text-slate-400">Message *</label>
+                    <div className="space-y-1">
+                      <label className="text-[11px] font-mono text-slate-400">Message *</label>
                       <textarea
-                        rows={5}
+                        rows={4}
                         required
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="Describe your project requirement or idea..."
-                        className="w-full bg-[#0A192F] border border-[#233554] focus:border-[#64FFDA] rounded-xl p-3 text-sm text-white placeholder-slate-600 focus:outline-none transition-colors resize-none"
+                        className="w-full bg-[#0A192F] border border-[#233554] focus:border-[#64FFDA] rounded-xl p-2.5 sm:p-3 text-xs sm:text-sm text-white placeholder-slate-600 focus:outline-none transition-colors resize-none"
                       />
                     </div>
 
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 bg-gradient-to-r from-[#64FFDA] via-[#38BDF8] to-[#FFD700] animate-gradient-slow disabled:bg-slate-700 text-[#0A192F] font-extrabold text-sm rounded-xl shadow-[0_10px_25px_-5px_rgba(100,255,218,0.5)] hover:shadow-[0_15px_30px_-5px_rgba(100,255,218,0.7)] transition-all transform hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full py-3.5 bg-gradient-to-r from-[#64FFDA] via-[#38BDF8] to-[#FFD700] animate-gradient-slow disabled:bg-slate-700 text-[#0A192F] font-extrabold text-xs sm:text-sm rounded-xl shadow-[0_10px_25px_-5px_rgba(100,255,218,0.5)] hover:shadow-[0_15px_30px_-5px_rgba(100,255,218,0.7)] transition-all transform hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2 cursor-pointer mt-1"
                     >
                       {isSubmitting ? (
                         <>

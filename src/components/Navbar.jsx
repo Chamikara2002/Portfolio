@@ -72,14 +72,14 @@ export default function Navbar({ onOpenCvModal }) {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 bg-[#112240]/80 border border-[#233554] p-1.5 rounded-full backdrop-blur-md">
+          <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-[#112240]/80 border border-[#233554] p-1 xl:p-1.5 rounded-full backdrop-blur-md">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`px-4 py-1.5 text-xs font-semibold rounded-full transition-all duration-300 ${isActive
+                  className={`px-2.5 py-1 xl:px-3.5 xl:py-1.5 text-[11px] xl:text-xs font-semibold rounded-full transition-all duration-300 ${isActive
                     ? 'bg-gradient-to-r from-[#64FFDA] via-[#38BDF8] to-[#FFD700] animate-gradient-slow text-[#0A192F] font-extrabold shadow-[0_8px_20px_-4px_rgba(100,255,218,0.45)] scale-105'
                     : 'text-slate-300 hover:text-[#64FFDA] hover:bg-[#233554]/60'
                     }`}
@@ -91,12 +91,12 @@ export default function Navbar({ onOpenCvModal }) {
           </nav>
 
           {/* Action Buttons */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
             <button
               onClick={onOpenCvModal}
-              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#64FFDA] via-[#38BDF8] to-[#FFD700] animate-gradient-slow text-[#0A192F] text-xs font-extrabold rounded-xl shadow-[0_8px_25px_-5px_rgba(100,255,218,0.5)] transition-all transform hover:scale-105 active:scale-95 cursor-pointer"
+              className="flex items-center gap-1.5 xl:gap-2 px-3 py-1.5 xl:px-5 xl:py-2.5 bg-gradient-to-r from-[#64FFDA] via-[#38BDF8] to-[#FFD700] animate-gradient-slow text-[#0A192F] text-[11px] xl:text-xs font-extrabold rounded-xl shadow-[0_8px_25px_-5px_rgba(100,255,218,0.5)] transition-all transform hover:scale-105 active:scale-95 cursor-pointer"
             >
-              <Download className="w-4 h-4 animate-bounce" />
+              <Download className="w-3.5 h-3.5 xl:w-4 xl:h-4 animate-bounce" />
               <span>Download CV</span>
             </button>
           </div>

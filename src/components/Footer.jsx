@@ -7,11 +7,11 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative z-10 bg-[#020C1B] border-t border-[#233554] py-12 text-slate-400 text-xs">
+    <footer className="relative z-10 bg-[#020C1B] border-t border-[#233554] pt-12 pb-24 sm:pb-28 lg:pb-32 text-slate-400 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          
+
           {/* Logo & Info */}
           <div className="flex items-center gap-3">
             <div className="p-1.5 bg-[#112240] border border-[#64FFDA]/30 rounded-xl flex items-center justify-center">
@@ -19,9 +19,9 @@ export default function Footer() {
             </div>
             <div>
               <span className="text-base font-headline font-extrabold tracking-wider text-white">
-                <span className="text-[#64FFDA]">&lt;</span>
-                CHAMI
-                <span className="text-[#FFD700]">/&gt;</span>
+                <span className="text-[#64FFDA]"></span>
+                CHAMIKARA
+                <span className="text-[#FFD700]"></span>
               </span>
               <p className="text-[11px] text-slate-400 font-mono">
                 W.M.C.V.B. Arambepola • Zentrix Software Solutions
@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-4 text-slate-400">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-slate-400">
             <a href="https://www.linkedin.com/in/chamikara-arambepola-9aa4122a4" target="_blank" rel="noopener noreferrer" className="hover:text-[#64FFDA] transition-colors">
               LinkedIn
             </a>

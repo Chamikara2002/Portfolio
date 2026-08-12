@@ -51,7 +51,7 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-24 relative z-10">
+    <section id="education" className="py-16 sm:py-20 lg:py-24 scroll-mt-24 lg:scroll-mt-28 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading with ScrollReveal */}

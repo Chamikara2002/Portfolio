@@ -18,17 +18,17 @@ export default function ScrollReveal({
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // Re-trigger animation whenever entering viewport (scrolling up or down)
           if (entry.isIntersecting) {
             setIsVisible(true);
-          } else {
-            setIsVisible(false); // Reset so it re-animates when scrolled back into view
+            if (domRef.current) {
+              observer.unobserve(domRef.current);
+            }
           }
         });
       },
       {
-        threshold: 0.15, // Trigger when 15% of element is visible
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.02,
+        rootMargin: '0px 0px 100px 0px'
       }
     );
 

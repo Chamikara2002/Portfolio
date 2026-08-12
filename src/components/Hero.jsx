@@ -58,14 +58,14 @@ export default function Hero({ onOpenCvModal }) {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-x-hidden">
 
       {/* Ambient background glows */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#64FFDA]/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#FFD700]/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
           {/* Text Content Area */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
@@ -80,7 +80,7 @@ export default function Hero({ onOpenCvModal }) {
             </div>
 
             {/* Main Greeting Heading with Syne font */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-headline font-extrabold tracking-tight text-white leading-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-headline font-extrabold tracking-tight text-white leading-tight">
               Hi, I'm <br />
               <span className="text-gradient-teal">W.M.C.V.B.</span>{' '}
               <span className="text-gradient-gold">Arambepola</span>
@@ -88,7 +88,7 @@ export default function Hero({ onOpenCvModal }) {
 
             {/* Dynamic Animated Auto-Typing Role */}
             <div className="h-12 flex items-center justify-center lg:justify-start">
-              <span className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-wide font-headline">
+              <span className="text-lg sm:text-2xl lg:text-2xl xl:text-3xl font-extrabold text-white tracking-wide font-headline">
                 I am a{' '}
                 <span className="text-gradient-gold border-b-2 border-[#FFD700] pb-0.5">
                   {currentText}

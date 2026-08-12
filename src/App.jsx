@@ -21,7 +21,7 @@ export default function App() {
   const songUrl = "https://drive.google.com/file/d/1zE7gvgmmdN6gU_d2FCZss8HRxG5baam9/view?usp=sharing";
 
   return (
-    <div className="relative min-h-screen bg-[#070b14] text-slate-100 overflow-hidden font-sans">
+    <div className="relative min-h-screen bg-[#070b14] text-slate-100 overflow-x-hidden font-sans">
       
       {/* 3D Particle Constellation Background */}
       <ParticleCanvas />
