@@ -13,7 +13,7 @@ export default function Projects() {
       title: 'Zentrix Software Solutions Web Platform',
       category: 'Full-Stack',
       featured: true,
-      image: '/zentrix.jpg',
+      image: '/zentrix.webp',
       tech: ['React', 'Vite', 'Spline 3D', 'Tailwind', 'Glassmorphism'],
       shortDesc: 'Futuristic 3D agency platform with Spline elements and glassmorphic UI.',
       fullDesc: 'Using contemporary web technology, a futuristic, high-performing official website for Zentrix Software Solutions was engineered. Spline and glassmorphic design elements are used to combine a 3D-animated hero segment into the highly interactive user interface. Presents an extensive service portfolio and enterprise software solutions.',
@@ -26,7 +26,7 @@ export default function Projects() {
       title: 'Voyara Adventures Tourism Platform',
       category: 'Full-Stack',
       featured: true,
-      image: '/voyara.jpg',
+      image: '/voyara.webp',
       tech: ['React', 'Java', 'MongoDB', 'Figma', 'CI/CD'],
       shortDesc: 'Full-stack Sri Lankan tour booking app with real-time pricing and dynamic vehicle selection.',
       fullDesc: 'Engineering a full-stack tourism web application using React, Java, and MongoDB to streamline Sri Lankan tour bookings. Features an ongoing implementation of a multi-step booking architecture, real-time pricing, dynamic vehicle selection, and automated route customization. Code changes pushed via VS Code deploy seamlessly via GitHub automated CI/CD pipelines.',
@@ -39,7 +39,7 @@ export default function Projects() {
       title: 'Deno Cabs Tours Booking Platform',
       category: 'Full-Stack',
       featured: true,
-      image: '/deno_cabs.jpg',
+      image: '/deno_cabs.webp',
       tech: ['React', 'Java', 'MongoDB', 'Figma', 'CSS3'],
       shortDesc: 'Cab booking & tour platform with dynamic fleet selection and automated fare calculation.',
       fullDesc: 'Full-stack cab booking and tour platform using Figma, React, Java, and MongoDB. Designed end-to-end UI/UX prototypes in Figma, leading to an active implementation of dynamic fleet selection, automated fare calculation, and location-based booking logic directly integrated with CI/CD pipelines.',
@@ -182,8 +182,16 @@ export default function Projects() {
                 <div className="relative aspect-video overflow-hidden bg-[#0A192F] border-b border-[#233554]">
                   <img
                     src={proj.image}
-                    alt={proj.title}
+                    alt={`${proj.title} - ${proj.category} project by W.M.C.V.B. Arambepola`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    onError={(e) => {
+                      if (proj.image.endsWith('.webp')) {
+                        e.target.onerror = null;
+                        e.target.src = proj.image.replace('.webp', '.jpg');
+                      }
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-[#0A192F]/20 to-transparent" />
                   
@@ -281,7 +289,19 @@ export default function Projects() {
 
             <div className="space-y-6">
               <div className="aspect-video rounded-xl overflow-hidden border border-[#233554]">
-                <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
+                <img
+                  src={selectedProject.image}
+                  alt={`${selectedProject.title} - detailed project screenshot`}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    if (selectedProject.image.endsWith('.webp')) {
+                      e.target.onerror = null;
+                      e.target.src = selectedProject.image.replace('.webp', '.jpg');
+                    }
+                  }}
+                />
               </div>
 
               <div>
@@ -291,7 +311,7 @@ export default function Projects() {
                   </span>
                 </div>
 
-                <h2 className="text-2xl font-headline font-bold text-white">{selectedProject.title}</h2>
+                <h3 className="text-2xl font-headline font-bold text-white">{selectedProject.title}</h3>
                 <p className="text-sm text-slate-300 mt-3 leading-relaxed">{selectedProject.fullDesc}</p>
               </div>
 

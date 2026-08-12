@@ -64,7 +64,7 @@ export default function Navbar({ onOpenCvModal }) {
             className="flex items-center gap-2.5 group cursor-pointer"
           >
             <div className="p-1.5 bg-[#112240] border border-[#64FFDA]/30 rounded-xl group-hover:border-[#64FFDA] transition-all duration-300 shadow-neon-teal flex items-center justify-center overflow-hidden">
-              <img src="/newonee_white.png" alt="Chamikara Logo" className="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/newonee_white.png" alt="W.M.C.V.B. Arambepola Logo" className="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <span className="text-xl font-headline font-extrabold tracking-wider">
               <span className="text-white">CHAMIKARA</span>

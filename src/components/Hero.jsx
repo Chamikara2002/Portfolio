@@ -5,7 +5,7 @@ import { FaReact } from "react-icons/fa";
 import { FaUserGraduate } from "react-icons/fa6";
 
 export default function Hero({ onOpenCvModal }) {
-  const profileImgUrl = "/profile.jpg";
+  const profileImgUrl = "/profile.webp";
 
   // Typing effect roles requested by user
   const roles = [
@@ -170,17 +170,19 @@ export default function Hero({ onOpenCvModal }) {
                 <div className="relative rounded-2xl overflow-hidden bg-[#0A192F] border border-[#233554] aspect-square flex items-center justify-center">
                   <img
                     src={profileImgUrl}
-                    alt="W.M.C.V.B. Arambepola"
+                    alt="W.M.C.V.B. Arambepola - Founder & Lead Software Engineer"
+                    fetchpriority="high"
+                    decoding="async"
                     className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80";
+                      e.target.src = "/profile.jpg";
                     }}
                   />
 
                   {/* Glass Card Floating Overlay */}
                   <div className="absolute bottom-4 left-4 right-4 p-3 bg-[#0A192F]/90 border border-[#64FFDA]/40 backdrop-blur-xl rounded-xl text-center shadow-xl">
-                    <h3 className="text-sm font-headline font-bold text-white tracking-wide">Chamikara Arambepola</h3>
+                    <h2 className="text-sm font-headline font-bold text-white tracking-wide">Chamikara Arambepola</h2>
                     <p className="text-[11px] text-[#64FFDA] font-mono mt-0.5">Undergraduate Software Engineer Student</p>
                   </div>
                 </div>

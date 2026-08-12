@@ -2,11 +2,10 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, Volume2, VolumeX, Music, X, Disc, Radio } from 'lucide-react';
 
 export default function AudioPlayer({ audioUrl }) {
-  // Reliable high quality ambient synthwave audio stream URLs
+  // Reliable high quality ambient futuristic cyberpunk audio track
   const trackList = [
-    { name: 'NIVIRO - The Return (NCS Release)', url: '/the-return.mp3' },
-    { name: 'Neon City Synthwave', url: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=futuristic-cyberpunk-14064.mp3' },
-    { name: 'Chamikara Ambient Track', url: audioUrl ? audioUrl.replace('/view?usp=sharing', '').replace('/file/d/', '/uc?export=open&id=') : '' }
+    { name: 'Futuristic Cyberpunk Theme', url: audioUrl || '/futuristic-cyberpunk.mp3' },
+    { name: 'NIVIRO - The Return (NCS Release)', url: '/the-return.mp3' }
   ].filter(t => t.url);
 
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);

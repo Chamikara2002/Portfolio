@@ -144,9 +144,9 @@ export default function CvModal({ isOpen, onClose }) {
               
               {/* Header Info */}
               <div className="border-b border-[#233554] pb-4">
-                <h1 className="text-2xl sm:text-3xl font-headline font-extrabold text-white tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-headline font-extrabold text-white tracking-tight">
                   W.M.C.V.B. ARAMBEPOLA
-                </h1>
+                </h2>
                 <p className="text-[#64FFDA] font-medium mt-1">
                   Founder & Lead Software Engineer | UI/UX & Full-Stack Specialist
                 </p>

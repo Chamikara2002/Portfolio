@@ -1,18 +1,94 @@
 <!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>W.M.C.V.B. Arambepola | Founder & Lead Software Engineer Portfolio</title>
-    
-    <!-- Google Fonts: Space Grotesk, Outfit, JetBrains Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-[#0A192F] text-slate-100 font-sans selection:bg-[#64FFDA] selection:text-[#0A192F] overflow-x-hidden antialiased">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <!-- Sitemap & Site Verification -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  <meta name="google-site-verification" content="CWyQAcWGkqBmhbx7GPQNzqQEpI7pLeme0viWRQ4N_b0" />
+  <meta name="msvalidate.01" content="25C3AAA70318A751AF975E66955FA7B2" />
+
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>W.M.C.V.B. Arambepola | Founder & Lead Software Engineer Portfolio</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="W.M.C.V.B. Arambepola is a Founder &amp; Lead Software Engineer based in Sri Lanka, specializing in React, Node.js, Java, Python, Flutter, and Full-Stack web apps." />
+  <meta name="keywords"
+    content="W.M.C.V.B. Arambepola, software engineer, full-stack developer, React developer, Sri Lanka developer, Lead Software Engineer, Web Developer, Flutter developer, Java developer, Node.js developer, portfolio" />
+  <meta name="author" content="W.M.C.V.B. Arambepola" />
+  <link rel="canonical" href="https://chamikara-vilochana.web.app/" />
+
+  <!-- Preload Hero LCP Image -->
+  <link rel="preload" as="image" href="/profile.webp" type="image/webp" fetchpriority="high" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="W.M.C.V.B. Arambepola | Founder &amp; Lead Software Engineer Portfolio" />
+  <meta property="og:description"
+    content="W.M.C.V.B. Arambepola is a Founder &amp; Lead Software Engineer based in Sri Lanka, specializing in React, Node.js, Java, Python, Flutter, and Full-Stack web apps." />
+  <meta property="og:image" content="https://chamikara-vilochana.web.app/profile.webp" />
+  <meta property="og:url" content="https://chamikara-vilochana.web.app/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="W.M.C.V.B. Arambepola | Founder &amp; Lead Software Engineer Portfolio" />
+  <meta name="twitter:description"
+    content="W.M.C.V.B. Arambepola is a Founder &amp; Lead Software Engineer based in Sri Lanka, specializing in React, Node.js, Java, Python, Flutter, and Full-Stack web apps." />
+  <meta name="twitter:image" content="https://chamikara-vilochana.web.app/profile.webp" />
+
+  <!-- JSON-LD Structured Data (schema.org Person) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "W.M.C.V.B. Arambepola",
+      "jobTitle": "Founder & Lead Software Engineer",
+      "url": "https://chamikara-vilochana.web.app/",
+      "image": "https://chamikara-vilochana.web.app/profile.webp",
+      "sameAs": [
+        "https://github.com/Chamikara2002",
+        "https://www.linkedin.com/in/chamikara-arambepola-9aa4122a4",
+        "https://x.com/ChamikaraViloch",
+        "https://www.youtube.com/@CHAMI_G",
+        "https://www.facebook.com/chamikara.vilochana.2025"
+      ],
+      "knowsAbout": [
+        "Software Engineering",
+        "Full-Stack Development",
+        "React.js",
+        "JavaScript",
+        "Node.js",
+        "Java",
+        "Python",
+        "Flutter",
+        "Tailwind CSS",
+        "MongoDB",
+        "MySQL",
+        "UI/UX Design"
+      ]
+    }
+    </script>
+
+  <!-- Google Fonts: Space Grotesk, Outfit, JetBrains Mono (Non-render-blocking async load with preload) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&amp;family=Outfit:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&amp;family=Outfit:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+    media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  </noscript>
+</head>
+
+<body
+  class="bg-[#0A192F] text-slate-100 font-sans selection:bg-[#64FFDA] selection:text-[#0A192F] overflow-x-hidden antialiased">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

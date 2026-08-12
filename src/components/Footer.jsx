@@ -15,7 +15,7 @@ export default function Footer() {
           {/* Logo & Info */}
           <div className="flex items-center gap-3">
             <div className="p-1.5 bg-[#112240] border border-[#64FFDA]/30 rounded-xl flex items-center justify-center">
-              <img src="/newonee_white.png" alt="Chamikara Logo" className="w-6 h-6 object-contain" />
+              <img src="/newonee_white.png" alt="W.M.C.V.B. Arambepola Logo" loading="lazy" decoding="async" className="w-6 h-6 object-contain" />
             </div>
             <div>
               <span className="text-base font-headline font-extrabold tracking-wider text-white">
@@ -64,7 +64,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-[#112240] text-center text-slate-400 text-[11px] font-mono">
-          © {new Date().getFullYear()} W.M.C.V.B. Arambepola. Built with React, Vite & Tailwind CSS. All rights reserved.
+          © {new Date().getFullYear()} W.M.C.V.B. Arambepola. All rights reserved.
         </div>
 
       </div>
