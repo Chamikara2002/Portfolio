@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a192f;
+  --card-bg: rgba(17, 34, 64, 0.85);
+  --card-border: rgba(100, 255, 218, 0.25);
+  --primary-navy: #0a192f;
+  --secondary-teal: #64ffda;
+  --tertiary-gold: #ffd700;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #f8fafc;
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-headline {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a192f;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #64ffda, #ffd700);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #38bdf8, #ffea70);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(17, 34, 64, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.glass-card-3d {
+  background: rgba(17, 34, 64, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(100, 255, 218, 0.25);
+  box-shadow: 0 15px 35px rgba(2, 12, 27, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform-style: preserve-3d;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.glass-card-3d:hover {
+  border-color: rgba(100, 255, 218, 0.6);
+  box-shadow: 0 25px 50px rgba(100, 255, 218, 0.25), 0 0 30px rgba(255, 215, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Text & Background Gradients */
+.text-gradient-teal {
+  background: linear-gradient(135deg, #64ffda 0%, #00b4d8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #ffd700 0%, #ff9f1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #64ffda 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #ffd700 0%, #eab308 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-architectural {
+  background: linear-gradient(135deg, #64ffda 0%, #00b4d8 50%, #ffd700 100%);
+}
+
+.shadow-neon-cyan {
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.35), 0 0 50px rgba(255, 215, 0, 0.15);
+}
+
+.shadow-neon-blue {
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.35), 0 0 50px rgba(10, 25, 47, 0.8);
+}
+
+/* 3D Tilt Card Component CSS Custom Variables */
+.tilt-card-container {
+  transform: var(--tilt-transform, perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1));
+  transition: var(--tilt-transition, transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1));
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-flare-overlay {
+  opacity: var(--flare-opacity, 0);
+  background: var(--flare-bg, radial-gradient(circle at 50% 50%, rgba(100, 255, 218, 0.2) 0%, transparent 70%));
+}
+
+/* Scroll Reveal CSS Custom Variables */
+.scroll-reveal-item {
+  opacity: var(--reveal-opacity, 0);
+  transform: var(--reveal-transform, translate3d(0, 45px, 0) scale(0.96));
+  transition-duration: var(--reveal-duration, 600ms);
+  transition-delay: var(--reveal-delay, 0ms);
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Skill Bar Custom Variable Width */
+.skill-bar-fill {
+  width: var(--skill-width, 0%);
+}
+
+/* Keyframes */
+@keyframes glowingBorder {
+  0% { border-color: rgba(100, 255, 218, 0.3); }
+  50% { border-color: rgba(255, 215, 0, 0.6); }
+  100% { border-color: rgba(100, 255, 218, 0.3); }
+}
+
+.animate-glowing-border {
+  animation: glowingBorder 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+.animate-float-slow {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Animated Slow-Shifting Gradient */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-slow {
+  background-size: 200% 200% !important;
+  animation: gradientShift 7s ease infinite !important;
+}
