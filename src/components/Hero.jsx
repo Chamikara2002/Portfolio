@@ -5,7 +5,7 @@ import { FaReact } from "react-icons/fa";
 import { FaUserGraduate } from "react-icons/fa6";
 
 export default function Hero({ onOpenCvModal }) {
-  const profileImgUrl = "https://lh3.googleusercontent.com/d/1enDki2hXKjkusBaRgtZ4FbDb0Hxv6Isa";
+  const profileImgUrl = "/profile.jpg";
 
   // Typing effect roles requested by user
   const roles = [
