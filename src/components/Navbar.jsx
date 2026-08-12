@@ -63,13 +63,11 @@ export default function Navbar({ onOpenCvModal }) {
             href="#home"
             className="flex items-center gap-2.5 group cursor-pointer"
           >
-            <div className="p-2 bg-[#112240] border border-[#64FFDA]/30 rounded-xl group-hover:border-[#64FFDA] transition-all duration-300 shadow-neon-teal">
-              <VscDeveloperTools className="w-5 h-5 text-[#64FFDA] group-hover:text-[#FFD700] group-hover:rotate-12 transition-all duration-300" />
+            <div className="p-1.5 bg-[#112240] border border-[#64FFDA]/30 rounded-xl group-hover:border-[#64FFDA] transition-all duration-300 shadow-neon-teal flex items-center justify-center overflow-hidden">
+              <img src="/newonee_white.png" alt="Chamikara Logo" className="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300" />
             </div>
             <span className="text-xl font-headline font-extrabold tracking-wider">
-              <span className="text-[#64FFDA]"></span>
               <span className="text-white">CHAMIKARA</span>
-              <span className="text-[#FFD700]"></span>
             </span>
           </a>
 
