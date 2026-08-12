@@ -80,7 +80,7 @@ export default function About() {
                 <ScrollReveal key={idx} direction="up" delay={150 + idx * 100}>
                   <TiltCard glowColor={stat.glow} maxTilt={15} className="p-6 text-center bg-[#112240] border-[#64FFDA]/30">
                     <div className="p-3 bg-[#0A192F] border border-[#233554] rounded-2xl w-fit mx-auto mb-3 shadow-md">
-                      <IconComp className={`w-6 h-6 ${stat.color}`} />
+                      <IconComp className={`w-6 h-6 ${stat.color}`} aria-label={stat.label} title={stat.label} role="img" />
                     </div>
                     <h4 className="text-2xl sm:text-3xl font-headline font-extrabold text-white tracking-tight">
                       {stat.title}

@@ -97,8 +97,9 @@ export default function AudioPlayer({ audioUrl }) {
         }}
         className="fixed bottom-6 left-6 z-50 p-3 bg-[#0A192F]/90 border border-[#64FFDA]/40 rounded-full text-[#64FFDA] hover:text-white hover:border-[#64FFDA] transition-all shadow-neon-teal backdrop-blur-md group cursor-pointer"
         title="Enable Music Player"
+        aria-label="Enable Music Player"
       >
-        <Music className="w-5 h-5 group-hover:scale-110 transition-transform" />
+        <Music className="w-5 h-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
       </button>
     );
   }
@@ -117,8 +118,8 @@ export default function AudioPlayer({ audioUrl }) {
       />
 
       {/* Spinning vinyl disk icon */}
-      <div className="relative flex items-center justify-center cursor-pointer" onClick={togglePlay}>
-        <Disc className={`w-5 h-5 sm:w-6 sm:h-6 text-[#64FFDA] ${isPlaying ? 'animate-spin-slow text-[#64FFDA]' : 'opacity-60'}`} />
+      <div className="relative flex items-center justify-center cursor-pointer" onClick={togglePlay} role="button" tabIndex={0} aria-label={isPlaying ? 'Pause Background Music' : 'Play Background Music'}>
+        <Disc className={`w-5 h-5 sm:w-6 sm:h-6 text-[#64FFDA] ${isPlaying ? 'animate-spin-slow text-[#64FFDA]' : 'opacity-60'}`} aria-hidden="true" />
         <span className="absolute -top-1 -right-1 flex h-2 w-2">
           {isPlaying && (
             <>
@@ -141,7 +142,7 @@ export default function AudioPlayer({ audioUrl }) {
 
       {/* Equalizer Wave Visualizer */}
       {isPlaying && (
-        <div className="hidden xs:flex items-end gap-0.5 h-4 px-1 cursor-pointer" onClick={togglePlay}>
+        <div className="hidden xs:flex items-end gap-0.5 h-4 px-1 cursor-pointer" onClick={togglePlay} aria-hidden="true">
           <span className="w-1 bg-[#64FFDA] rounded-full animate-[bounce_1s_infinite_100ms] h-2"></span>
           <span className="w-1 bg-[#FFD700] rounded-full animate-[bounce_1s_infinite_300ms] h-4"></span>
           <span className="w-1 bg-[#38BDF8] rounded-full animate-[bounce_1s_infinite_200ms] h-3"></span>
@@ -154,8 +155,9 @@ export default function AudioPlayer({ audioUrl }) {
         onClick={togglePlay}
         className="p-2 sm:p-2.5 bg-[#64FFDA] hover:bg-[#52e0c4] text-[#0A192F] rounded-full transition-all transform hover:scale-105 active:scale-95 shadow-neon-teal cursor-pointer"
         title={isPlaying ? 'Pause Music' : 'Play Background Sound'}
+        aria-label={isPlaying ? 'Pause Music' : 'Play Background Sound'}
       >
-        {isPlaying ? <Pause className="w-4 h-4 text-[#0A192F]" /> : <Play className="w-4 h-4 ml-0.5 text-[#0A192F]" />}
+        {isPlaying ? <Pause className="w-4 h-4 text-[#0A192F]" aria-hidden="true" /> : <Play className="w-4 h-4 ml-0.5 text-[#0A192F]" aria-hidden="true" />}
       </button>
 
       {/* Volume Control Section with Expanding Slider */}
@@ -168,11 +170,12 @@ export default function AudioPlayer({ audioUrl }) {
           onClick={() => setShowVolumeSlider((prev) => !prev)}
           className="p-1 sm:p-1.5 text-slate-400 hover:text-[#64FFDA] transition-colors"
           title={isMuted ? 'Unmute Sound' : `Volume: ${Math.round((isMuted ? 0 : volume) * 100)}%`}
+          aria-label={isMuted ? 'Unmute Sound' : 'Mute Sound'}
         >
           {isMuted || volume === 0 ? (
-            <VolumeX className="w-4 h-4 text-red-400" />
+            <VolumeX className="w-4 h-4 text-red-400" aria-hidden="true" />
           ) : (
-            <Volume2 className="w-4 h-4 text-[#64FFDA]" />
+            <Volume2 className="w-4 h-4 text-[#64FFDA]" aria-hidden="true" />
           )}
         </button>
 
@@ -191,6 +194,7 @@ export default function AudioPlayer({ audioUrl }) {
             onChange={handleVolumeChange}
             className="w-16 sm:w-20 accent-[#64FFDA] h-1.5 bg-[#112240] rounded-lg cursor-pointer"
             title={`Volume Level: ${Math.round((isMuted ? 0 : volume) * 100)}%`}
+            aria-label="Volume Slider"
           />
 
           <span className="text-[10px] font-mono text-[#64FFDA] font-bold min-w-[24px] text-right">
@@ -207,8 +211,9 @@ export default function AudioPlayer({ audioUrl }) {
         }}
         className="p-1.5 text-slate-500 hover:text-red-400 transition-colors ml-1"
         title="Disable Music Player"
+        aria-label="Disable Music Player"
       >
-        <X className="w-3.5 h-3.5" />
+        <X className="w-3.5 h-3.5" aria-hidden="true" />
       </button>
     </div>
   );

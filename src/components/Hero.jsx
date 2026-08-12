@@ -108,10 +108,10 @@ export default function Hero({ onOpenCvModal }) {
                 <MapPin className="w-3.5 h-3.5 text-[#64FFDA]" /> Sri Lanka
               </span>
               <span className="flex items-center gap-1.5 px-3.5 py-1.5 bg-[#112240] border border-[#FFD700]/30 rounded-lg">
-                <FaUserGraduate className="w-3.5 h-3.5 text-[#FFD700]" /> BEng (Hons) SE
+                <FaUserGraduate className="w-3.5 h-3.5 text-[#FFD700]" aria-label="Education" title="Education" role="img" /> BEng (Hons) SE
               </span>
               <span className="flex items-center gap-1.5 px-3.5 py-1.5 bg-[#112240] border border-[#64FFDA]/30 rounded-lg">
-                <FaReact className="w-3.5 h-3.5 text-[#64FFDA]" /> React + Vite & Java
+                <FaReact className="w-3.5 h-3.5 text-[#64FFDA]" aria-label="React" title="React" role="img" /> React + Vite & Java
               </span>
             </div>
 
@@ -122,14 +122,15 @@ export default function Hero({ onOpenCvModal }) {
                 className="flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#64FFDA] via-[#38BDF8] to-[#FFD700] animate-gradient-slow text-[#0A192F] font-extrabold rounded-2xl shadow-[0_10px_25px_-5px_rgba(100,255,218,0.5)] hover:shadow-[0_15px_30px_-5px_rgba(100,255,218,0.7)] transition-all transform hover:scale-105 active:scale-95 text-sm"
               >
                 <span>View Projects</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </a>
 
               <button
                 onClick={onOpenCvModal}
                 className="flex items-center gap-2 px-7 py-3.5 bg-[#112240] hover:bg-[#1d3557] border border-[#64FFDA]/40 text-[#64FFDA] hover:text-white font-extrabold rounded-2xl transition-all shadow-lg shadow-[#64FFDA]/10 transform hover:scale-105 active:scale-95 text-sm cursor-pointer"
+                aria-label="Download CV PDF"
               >
-                <Download className="w-4 h-4 text-[#FFD700] animate-bounce" />
+                <Download className="w-4 h-4 text-[#FFD700] animate-bounce" aria-hidden="true" />
                 <span>Download CV (.PDF)</span>
               </button>
             </div>
@@ -148,8 +149,9 @@ export default function Hero({ onOpenCvModal }) {
                       rel="noopener noreferrer"
                       className="p-2.5 bg-[#112240] border border-[#233554] hover:border-[#64FFDA] rounded-xl text-slate-300 hover:text-[#64FFDA] transition-all transform hover:-translate-y-1 shadow-md"
                       title={social.name}
+                      aria-label={social.name}
                     >
-                      <IconComponent className="w-5 h-5" />
+                      <IconComponent className="w-5 h-5" aria-hidden="true" />
                     </a>
                   );
                 })}

@@ -90,7 +90,7 @@ export default function Skills() {
                   {/* Category Header */}
                   <div className="flex items-center gap-3 border-b border-[#233554] pb-4 mb-6">
                     <div className="p-2.5 bg-[#0A192F] border border-[#233554] rounded-xl">
-                      <IconComp className={`w-6 h-6 ${cat.color}`} />
+                      <IconComp className={`w-6 h-6 ${cat.color}`} aria-label={cat.title} title={cat.title} role="img" />
                     </div>
                     <h3 className="text-xl font-headline font-bold text-white tracking-wide">
                       {cat.title}

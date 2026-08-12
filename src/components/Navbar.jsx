@@ -114,6 +114,8 @@ export default function Navbar({ onOpenCvModal }) {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-slate-300 hover:text-white bg-[#112240] border border-[#233554] rounded-xl"
+              aria-label="Toggle navigation menu"
+              title="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
