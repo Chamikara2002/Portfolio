@@ -19,8 +19,8 @@ const CvModal = lazy(() => import('./components/CvModal'));
 export default function App() {
   const [cvModalOpen, setCvModalOpen] = useState(false);
 
-  // Background futuristic cyberpunk audio track
-  const songUrl = "/futuristic-cyberpunk.mp3";
+  // Background ambient fantasy audio track (The Lights of the Village - Geoff Harvey)
+  const songUrl = "/the-lights-of-the-village.mp3";
 
   return (
     <div className="relative min-h-screen bg-[#070b14] text-slate-100 overflow-x-hidden font-sans">

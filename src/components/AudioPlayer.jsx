@@ -2,9 +2,10 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, Volume2, VolumeX, Music, X, Disc, Radio } from 'lucide-react';
 
 export default function AudioPlayer({ audioUrl }) {
-  // Reliable high quality ambient futuristic cyberpunk audio track
+  // Ambient fantasy & cyberpunk background track list
   const trackList = [
-    { name: 'Futuristic Cyberpunk Theme', url: audioUrl || '/futuristic-cyberpunk.mp3' },
+    { name: 'The Lights of the Village - Geoff Harvey', url: audioUrl || '/the-lights-of-the-village.mp3' },
+    { name: 'Futuristic Cyberpunk Theme', url: '/futuristic-cyberpunk.mp3' },
     { name: 'NIVIRO - The Return (NCS Release)', url: '/the-return.mp3' }
   ].filter(t => t.url);
 
@@ -12,7 +13,7 @@ export default function AudioPlayer({ audioUrl }) {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
-  const [volume, setVolume] = useState(0.85);
+  const [volume, setVolume] = useState(0.03);
   const [isDisabled, setIsDisabled] = useState(false);
   const [showVolumeSlider, setShowVolumeSlider] = useState(false);
   const [userInteracted, setUserInteracted] = useState(false);
@@ -106,7 +107,7 @@ export default function AudioPlayer({ audioUrl }) {
 
   return (
     <div className="fixed bottom-6 left-6 z-50 flex items-center gap-2.5 sm:gap-3 bg-[#0A192F]/95 border border-[#64FFDA]/40 p-2 sm:p-2.5 px-3.5 sm:px-4 rounded-full shadow-neon-teal backdrop-blur-2xl transition-all duration-300">
-      
+
       <audio
         ref={audioRef}
         src={trackList[currentTrackIndex].url}
@@ -181,9 +182,8 @@ export default function AudioPlayer({ audioUrl }) {
 
         {/* Smooth Horizontal Expanding Volume Slider */}
         <div
-          className={`flex items-center gap-1.5 overflow-hidden transition-all duration-300 ease-in-out ${
-            showVolumeSlider ? 'max-w-[140px] opacity-100 ml-1 pr-1' : 'max-w-0 opacity-0 ml-0 pr-0 pointer-events-none'
-          }`}
+          className={`flex items-center gap-1.5 overflow-hidden transition-all duration-300 ease-in-out ${showVolumeSlider ? 'max-w-[140px] opacity-100 ml-1 pr-1' : 'max-w-0 opacity-0 ml-0 pr-0 pointer-events-none'
+            }`}
         >
           <input
             type="range"
