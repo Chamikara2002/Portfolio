@@ -168,6 +168,7 @@ export default function Hero({ onOpenCvModal }) {
                 {/* Glowing neon ring outline */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#64FFDA] via-[#38BDF8] to-[#FFD700] rounded-3xl blur opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-glow" />
 
+
                 {/* Profile Image Container */}
                 <div className="relative rounded-2xl overflow-hidden bg-[#0A192F] border border-[#233554] aspect-square flex items-center justify-center">
                   <img
